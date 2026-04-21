@@ -14,7 +14,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from smolagents import tool, CodeAgent, TransformersModel
+from smolagents import tool, CodeAgent, HfApiModel
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Global state shared across tool calls within a session
@@ -245,9 +245,8 @@ When you receive a question:
 
 Never make up data - only report what the tools return."""
 
-def build_agent(model_id: str = "Qwen/Qwen2.5-0.5B-Instruct"):
-    """Create and return a CodeAgent with all data-analysis tools."""
-    model = TransformersModel(model_id=model_id)
+def build_agent(model_id: str = "Qwen/Qwen2.5-72B-Instruct"):
+    model = HfApiModel(model_id=model_id)
     agent = CodeAgent(
         tools=[
             load_dataset,
@@ -260,7 +259,7 @@ def build_agent(model_id: str = "Qwen/Qwen2.5-0.5B-Instruct"):
         ],
         model=model,
         max_steps=10,
-        additional_authorized_imports=["pandas", "numpy", "matplotlib", "seaborn", "scipy"],
+        additional_authorized_imports=["pandas", "numpy", "matplotlib", "seaborn"],
     )
     return agent
 
