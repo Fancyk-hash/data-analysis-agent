@@ -1,5 +1,5 @@
-# DataBot — Data Analysis Agent
-**CSC 446 Natural Language Processing — Mini-project D**
+# DataBot - Data Analysis Agent
+**CSC 446 Natural Language Processing - Mini-project D**
 
 A conversational AI agent that answers questions about CSV 
 datasets through Telegram. Built with smolagents and a local 

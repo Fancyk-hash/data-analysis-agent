@@ -1,5 +1,5 @@
 """
-Telegram Bot Interface — Data Analysis Agent (CSC 446 Mini-project D)
+Telegram Bot Interface - Data Analysis Agent (CSC 446 Mini-project D)
 Run with: python telegram_bot.py
 """
 

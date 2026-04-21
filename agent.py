@@ -1,5 +1,5 @@
 """
-Data Analysis Agent — CSC 446 Mini-project D
+Data Analysis Agent - CSC 446 Mini-project D
 Uses smolagents for tool orchestration + a local Qwen model.
 """
 
@@ -41,7 +41,7 @@ def load_dataset(filename: str) -> str:
         info_str = buf.getvalue()
         preview = _df.head(3).to_string(index=False)
         return (
-            f"Loaded '{_df_name}' — {_df.shape[0]} rows x {_df.shape[1]} columns.\n\n"
+            f"Loaded '{_df_name}' - {_df.shape[0]} rows x {_df.shape[1]} columns.\n\n"
             f"Column info:\n{info_str}\n\nFirst 3 rows:\n{preview}"
         )
     except FileNotFoundError:
@@ -243,7 +243,7 @@ When you receive a question:
 5. If a tool fails (e.g., wrong column name), explain what went wrong and try an alternative.
 6. Handle follow-up questions that reference previous results.
 
-Never make up data — only report what the tools return."""
+Never make up data - only report what the tools return."""
 
 def build_agent(model_id: str = "Qwen/Qwen2.5-0.5B-Instruct"):
     """Create and return a CodeAgent with all data-analysis tools."""
@@ -278,7 +278,7 @@ if __name__ == "__main__":
         "Are there any outliers in the Fare column?",
     ]
     print("=" * 60)
-    print("DATA ANALYSIS AGENT — local test")
+    print("DATA ANALYSIS AGENT - local test")
     print("=" * 60)
     for q in test_queries:
         print(f"\n>>> {q}")

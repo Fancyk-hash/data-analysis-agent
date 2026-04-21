@@ -1,4 +1,4 @@
-# Mini-project D: Data Analysis Agent — Write-up
+# Mini-project D: Data Analysis Agent - Write-up
 **CSC 446 – Natural Language Processing**
 **Due: April 21, 2026**
 
@@ -17,13 +17,13 @@ it handles the tool-calling loop automatically and lets me focus
 on designing the tools themselves.
 
 **7 tools (exceeds the minimum of 3):**
-- load_dataset — loads a CSV and returns schema and preview
-- run_query — executes pandas expressions against the dataframe
-- describe_column — returns full statistics for any column
-- plot — runs matplotlib code and saves the chart
-- correlation_matrix — finds relationships between columns
-- detect_outliers — IQR-based outlier detection
-- suggest_analysis — recommends what to analyse next
+- load_dataset - loads a CSV and returns schema and preview
+- run_query - executes pandas expressions against the dataframe
+- describe_column - returns full statistics for any column
+- plot - runs matplotlib code and saves the chart
+- correlation_matrix - finds relationships between columns
+- detect_outliers - IQR-based outlier detection
+- suggest_analysis - recommends what to analyse next
 
 **Telegram interface**
 Each chat session gets its own agent instance. The bot sends 
