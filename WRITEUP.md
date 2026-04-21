@@ -31,10 +31,12 @@ and docstrings automatically.
 
 **Model choice**
 I started with Qwen/Qwen2.5-3B-Instruct as recommended in the 
-slides, but my laptop ran out of RAM loading the 6GB model. I 
-switched to Qwen/Qwen2.5-0.5B-Instruct which runs locally using 
-TransformersModel. This keeps everything on the local machine 
-with no external API dependency.
+slides, but my laptop ran out of RAM loading the model locally. 
+I tried the 0.5B version but it was too slow and unreliable. 
+The final solution was to use Qwen/Qwen2.5-72B-Instruct via the 
+HuggingFace API using HfApiModel. This runs the model on 
+HuggingFace servers instead of locally, giving fast and accurate 
+responses without RAM limitations.
 
 **Telegram interface**
 Each chat session gets its own agent instance keyed by chat_id. 
