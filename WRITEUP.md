@@ -63,3 +63,12 @@ The bot sends plots as actual images in Telegram. Slash commands
 3. Add persistent memory so the bot remembers datasets between sessions
 4. Support multiple datasets loaded at the same time
 5. Add a natural language summary after every plot automatically
+
+## 5. Tech Stack
+- smolagents 1.13.0 - agent framework
+- Qwen/Qwen2.5-72B-Instruct - AI model via HuggingFace API
+- HfApiModel - connects to HuggingFace inference servers
+- pandas, matplotlib, seaborn - data analysis and visualization
+- python-telegram-bot - Telegram interface
+- Novita/Together AI - inference providers (free tier)
+
